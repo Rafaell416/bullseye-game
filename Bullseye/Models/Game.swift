@@ -8,7 +8,7 @@ struct Game {
 	
 	
 	func points(sliderValue: Int) -> Int {
-		var difference: Int = abs(target - sliderValue)
+		let difference: Int = abs(target - sliderValue)
 		let awardedPoints: Int = 100 - difference
 		return awardedPoints
 	}
