@@ -14,6 +14,8 @@
 		402439412A258F530053B7D2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 402439402A258F530053B7D2 /* Preview Assets.xcassets */; };
 		40EADCD62A42468700E0F686 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40EADCD52A42468700E0F686 /* Game.swift */; };
 		F50B06F12A4D1E6C0059FC92 /* TextViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = F50B06F02A4D1E6C0059FC92 /* TextViews.swift */; };
+		F5429E8F2A5E813B0051503C /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5429E8E2A5E813B0051503C /* BackgroundView.swift */; };
+		F5DC268E2A4F955000A4F0EE /* RoundedViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5DC268D2A4F955000A4F0EE /* RoundedViews.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +38,8 @@
 		402439402A258F530053B7D2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		40EADCD52A42468700E0F686 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		F50B06F02A4D1E6C0059FC92 /* TextViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextViews.swift; sourceTree = "<group>"; };
+		F5429E8E2A5E813B0051503C /* BackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
+		F5DC268D2A4F955000A4F0EE /* RoundedViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedViews.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +118,8 @@
 			children = (
 				4024393B2A258F510053B7D2 /* ContentView.swift */,
 				F50B06F02A4D1E6C0059FC92 /* TextViews.swift */,
+				F5DC268D2A4F955000A4F0EE /* RoundedViews.swift */,
+				F5429E8E2A5E813B0051503C /* BackgroundView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -235,8 +241,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F5429E8F2A5E813B0051503C /* BackgroundView.swift in Sources */,
 				4024393C2A258F510053B7D2 /* ContentView.swift in Sources */,
 				F50B06F12A4D1E6C0059FC92 /* TextViews.swift in Sources */,
+				F5DC268E2A4F955000A4F0EE /* RoundedViews.swift in Sources */,
 				40EADCD62A42468700E0F686 /* Game.swift in Sources */,
 				4024393A2A258F510053B7D2 /* BullseyeApp.swift in Sources */,
 			);

@@ -7,12 +7,12 @@ struct ContentView: View {
     
     var body: some View {
         ZStack {
-            Color("BackgroundColor").edgesIgnoringSafeArea(.all)
+            BackgroundView(game: $game)
             VStack {
                 InstructionsView(gameInstance: $game)
                 SliderView(sliderValue: $sliderValue)
                 HitmeButtonView(isAlertVisible: $isAlertVisible, gameInstance: $game, sliderValue: $sliderValue)
-
+                
             }
         }
     }
@@ -36,9 +36,9 @@ struct SliderView: View {
     
     var body: some View {
         HStack {
-            SliderLabelText(text: "1")
+            SliderLabelText(text: "1").frame(width: 35)
             Slider(value: $sliderValue, in: 1.0...100.0)
-            SliderLabelText(text: "100")
+            SliderLabelText(text: "100").frame(width: 35)
             
         }
         .padding()
@@ -49,7 +49,7 @@ struct HitmeButtonView: View {
     @Binding var isAlertVisible: Bool
     @Binding var gameInstance: Game
     @Binding var sliderValue: Double
-
+    
     
     var body: some View {
         Button("Hit me".uppercased()) {
@@ -72,9 +72,7 @@ struct HitmeButtonView: View {
         .cornerRadius(21)
         .overlay(
             RoundedRectangle(
-                cornerRadius: 21).stroke(
-                    .white, lineWidth: 3
-                )
+                cornerRadius: 21).stroke(.white, lineWidth: 3)
         )
         .alert(
             "Hello SwiftUI!",
