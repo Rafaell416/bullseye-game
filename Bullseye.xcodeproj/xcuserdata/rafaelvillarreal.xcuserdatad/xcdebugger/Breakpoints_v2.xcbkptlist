@@ -8,7 +8,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "5561AFF8-1F1E-404C-97E5-19AB00CB9873"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Bullseye/Views/ContentView.swift"
@@ -16,6 +16,54 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "9"
             endingLineNumber = "9"
+            landmarkName = "body"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "5561AFF8-1F1E-404C-97E5-19AB00CB9873 - 3254cb0de10bc03"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Bullseye.ContentView.body.getter : some"
+                  moduleName = "Bullseye"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/rafaelvillarreal/Documents/code/others/ios/bullseye-game/Bullseye/Views/ContentView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "9"
+                  endingLineNumber = "9"
+                  offsetFromSymbolStart = "184">
+               </Location>
+               <Location
+                  uuid = "5561AFF8-1F1E-404C-97E5-19AB00CB9873 - 44cfeb35c74d9db0"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; SwiftUI.TupleView&lt;(Bullseye.BackgroundView, SwiftUI.VStack&lt;SwiftUI.TupleView&lt;(Bullseye.InstructionsView, Bullseye.SliderView, Bullseye.HitmeButtonView)&gt;&gt;)&gt; in Bullseye.ContentView.body.getter : some"
+                  moduleName = "Bullseye"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/rafaelvillarreal/Documents/code/others/ios/bullseye-game/Bullseye/Views/ContentView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "10"
+                  endingLineNumber = "10"
+                  offsetFromSymbolStart = "216">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "765272C7-8D9D-4E4F-BC55-8EBB978634D5"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Bullseye/Views/ContentView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "56"
+            endingLineNumber = "56"
             landmarkName = "body"
             landmarkType = "24">
          </BreakpointContent>

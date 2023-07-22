@@ -12,6 +12,12 @@ struct Game {
 		let awardedPoints: Int = 100 - difference
 		return awardedPoints
 	}
+    
+    mutating func startNewRound(points: Int) -> Void {
+        score += points
+        round += 1
+        target = Int.random(in: 1...100)
+    }
 	
 }
 
