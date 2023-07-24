@@ -9,11 +9,27 @@ struct ContentView: View {
         ZStack {
             BackgroundView(game: $game)
             VStack {
-                InstructionsView(gameInstance: $game)
-                SliderView(sliderValue: $sliderValue)
-                HitmeButtonView(isAlertVisible: $isAlertVisible, gameInstance: $game, sliderValue: $sliderValue)
+							InstructionsView(gameInstance: $game).padding(.bottom, isAlertVisible ? 0 : 100)
+							if isAlertVisible {
+								PointsView(
+									isAlertVisible: $isAlertVisible,
+									gameInstance: $game,
+									sliderValue: $sliderValue
+								).transition(.scale)
+							} else {
+								HitmeButtonView(
+									isAlertVisible: $isAlertVisible,
+									gameInstance: $game,
+									sliderValue: $sliderValue
+								).transition(.scale)
+							}
                 
             }
+					if !isAlertVisible {
+						SliderView(sliderValue: $sliderValue)
+							.zIndex(1)
+							.transition(.scale)
+					}
         }
     }
 }
@@ -53,7 +69,9 @@ struct HitmeButtonView: View {
     
     var body: some View {
         Button("Hit me".uppercased()) {
-            isAlertVisible = true
+					withAnimation {
+						isAlertVisible = true
+					}
         }
         .padding(20.0)
         .background(
@@ -74,22 +92,7 @@ struct HitmeButtonView: View {
             RoundedRectangle(
                 cornerRadius: 21).stroke(.white, lineWidth: 3)
         )
-        .alert(
-            "Hello SwiftUI!",
-            isPresented: $isAlertVisible,
-            actions: {
-                Button("Close Alert") {
-                    gameInstance.startNewRound(points: gameInstance.points(sliderValue: Int(sliderValue)))
-                }
-            },
-            message: {
-                let roundedValue: Int = Int(sliderValue.rounded())
-                Text("""
-                     The slider value is \(roundedValue).
-                     You scored \(gameInstance.points(sliderValue: roundedValue)) this round
-                     """)
-            }
-        )
+        
     }
 }
 
@@ -97,7 +100,6 @@ struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
         ContentView()
-            .previewDevice("iPhone 14 Pro")
             .preferredColorScheme(.dark)
     }
 }
